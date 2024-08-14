@@ -56,7 +56,7 @@ class NewsletterSubscriber(models.Model):
         db_comment="Subscriber's preferred frequency of newsletter delivery.",
     )
     language = models.CharField(
-        max_length=2,
+        max_length=10,
         choices=settings.LANGUAGES,
         default=settings.LANGUAGE_CODE,
         verbose_name=_("Language Preference"),
