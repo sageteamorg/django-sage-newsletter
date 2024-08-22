@@ -32,7 +32,7 @@ isort = "^5.13.2"
 
 
 [tool.pytest.ini_options]
-addopts = "--cov=. --cov-report=term-missing --cov-report=html"
+addopts = "--cov=. --cov-report=term-missing --cov-report=html --cov-fail-under=90"
 DJANGO_SETTINGS_MODULE = "kernel.settings"
 python_files = ["tests.py", "test_*.py"]
 testpaths = ["tests"]
