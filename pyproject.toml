@@ -8,6 +8,28 @@ packages = [
     { include = "sage_newsletter" }
 ]
 
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"Source Code" = "https://github.com/sageteamorg/django-sage-newsletter"
+"Issues" = "https://github.com/sageteamorg/django-sage-newsletter/issues"
+
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
 django = [
@@ -30,6 +52,7 @@ django-stubs = "^5.0.4"
 pytest = "^8.3.2"
 pytest-django = "^4.8.0"
 pytest-cov = "^5.0.0"
+codecov = "^2.1.13"
 black = "^24.4.2"
 isort = "^5.13.2"
 

@@ -1,4 +1,4 @@
-# Contributing to django-iranian-cities
+# Contributing to django-sage-newsletter
 
 Thank you for considering contributing to `django-sage-newsletter`! We welcome contributions from the community to help make this project better.
 
