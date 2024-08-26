@@ -55,10 +55,11 @@ pytest-cov = "^5.0.0"
 codecov = "^2.1.13"
 black = "^24.4.2"
 isort = "^5.13.2"
+bandit = {extras = ["toml"], version = "^1.7.9"}
 
 
 [tool.pytest.ini_options]
-addopts = "--cov=. --cov-report=term-missing --cov-report=html --cov-fail-under=90"
+addopts = "--cov --cov-report=term-missing --cov-report=html --cov-fail-under=90"
 DJANGO_SETTINGS_MODULE = "kernel.settings"
 python_files = ["tests.py", "test_*.py"]
 testpaths = ["tests"]
@@ -74,6 +75,25 @@ norecursedirs = [
     "build",
     "kernel"
 ]
+
+[tool.bandit]
+targets = ["./sage_newsletter"]
+exclude_dirs = [
+    "tests",
+    "migrations",
+]
+severity = "medium"
+confidence = "medium"
+max_lines = 500
+progress = true
+reports = true
+output_format = "screen"
+output_file = "bandit_report.txt"
+include = ["B101", "B102"]
+exclude_tests = ["B301", "B302"]
+
+[tool.bandit.plugins]
+B104 = { check_typed_list = true }
 
 [tool.coverage.run]
 omit = [
