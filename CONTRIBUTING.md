@@ -9,6 +9,7 @@ Thank you for considering contributing to `django-sage-newsletter`! We welcome c
   - [Getting Started](#getting-started)
   - [Running Tests](#running-tests)
   - [Code Style](#code-style)
+  - [Security Checks](#security-checks)
   - [Pre-commit Hooks](#pre-commit-hooks)
     - [Setting Up Pre-commit Hooks](#setting-up-pre-commit-hooks)
   - [Submitting a Pull Request](#submitting-a-pull-request)
@@ -67,6 +68,19 @@ Additionally, we use `flake8` and `pylint` for linting. You can run these tools 
 poetry run flake8
 poetry run pylint sage_newsletter
 ```
+
+## Security Checks
+
+We use `bandit` to perform security checks on our codebase. Bandit helps identify common security issues in Python code.
+
+### Running Bandit
+
+To run Bandit with the current configuration:
+
+```bash
+poetry run bandit -c pyproject.toml
+```
+
 
 ## Pre-commit Hooks
 
