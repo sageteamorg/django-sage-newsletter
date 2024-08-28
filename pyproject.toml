@@ -56,7 +56,8 @@ codecov = "^2.1.13"
 black = "^24.4.2"
 isort = "^5.13.2"
 bandit = {extras = ["toml"], version = "^1.7.9"}
-
+django-debug-toolbar = "^4.4.6"
+django-migration-linter = "^5.1.0"
 
 [tool.pytest.ini_options]
 addopts = "--cov --cov-report=term-missing --cov-report=html --cov-fail-under=90"
