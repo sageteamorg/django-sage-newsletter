@@ -7,7 +7,7 @@ Thank you for your interest in contributing to our package! This document outlin
 1. **Fork and Clone**: Fork the repository and clone it to your local machine.
     ```bash
     git clone https://github.com/sageteamorg/django-sage-newsletter.git
-    cd django-sage-newsletter
+    cd sage_newsletter
     ```
 
 2. **Create a Branch**: Create a new branch for your feature or bugfix.
