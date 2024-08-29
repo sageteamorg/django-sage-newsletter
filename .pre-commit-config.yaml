@@ -76,7 +76,7 @@ repos:
           - "-rn"
           - "-sn"
           - "--rcfile=pyproject.toml"
-        files: ^sage_invoice/
+        files: ^sage_newsletter/
 
 ci:
   skip: [pylint]
