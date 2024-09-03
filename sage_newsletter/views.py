@@ -53,8 +53,7 @@ class NewsletterViewMixin(ContextMixin):
         return context
 
     def post(self, request, *args, **kwargs):
-        """
-        Handles POST requests for newsletter subscription.
+        """Handles POST requests for newsletter subscription.
 
         This method processes the newsletter subscription form. If the form is valid,
         it either adds a new subscription or reactivates an existing one. Appropriate
@@ -68,6 +67,7 @@ class NewsletterViewMixin(ContextMixin):
         Returns:
             HttpResponseRedirect: Redirects to the specified URL on success.
             HttpResponse: Renders the template with context on failure.
+
         """
         form = self.form_class(request.POST)
         if form.is_valid():
@@ -84,9 +84,9 @@ class NewsletterViewMixin(ContextMixin):
                     request, _("You have successfully subscribed to the newsletter.")
                 )
             return redirect(request.path)
-        
+
         # Check if the view has a get_queryset method
-        if hasattr(self, 'get_queryset'):
+        if hasattr(self, "get_queryset"):
             self.object_list = self.get_queryset()
 
         # Handling for DetailView
