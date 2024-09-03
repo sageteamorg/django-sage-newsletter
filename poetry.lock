@@ -184,6 +184,20 @@ jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
+name = "blacken-docs"
+version = "1.18.0"
+description = "Run Black on Python code blocks in documentation files."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "blacken_docs-1.18.0-py3-none-any.whl", hash = "sha256:64f592246784131e9f84dad1db397f44eeddc77fdf01726bab920a3f00a3815c"},
+    {file = "blacken_docs-1.18.0.tar.gz", hash = "sha256:47bed628679d008a8eb55d112df950582e68d0f57615223929e366348d935444"},
+]
+
+[package.dependencies]
+black = ">=22.1"
+
+[[package]]
 name = "cachetools"
 version = "5.5.0"
 description = "Extensible memoizing collections and decorators"
@@ -1723,4 +1737,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0"
-content-hash = "31fdd33d3bc4e4c542a6b6cae0c21e371634d31aa0a476d421eeee9a47eca3ed"
+content-hash = "16e36a2f76fb423d4925228c8dc9a0ed00531cfe2c59ef8987ed9eb71f3c5e6b"
