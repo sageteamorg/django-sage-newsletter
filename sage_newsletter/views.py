@@ -9,11 +9,12 @@ from .forms import NewsletterSubscriptionForm
 
 
 class NewsletterViewMixin(ContextMixin):
-    """
-    A mixin to add newsletter subscription functionality to a view.
+    """A mixin to add newsletter subscription functionality to a view.
 
-    This mixin provides functionalities for handling the newsletter subscription form.
-    It can be mixed into any Django view to add these capabilities.
+    This mixin provides functionalities for handling the newsletter
+    subscription form. It can be mixed into any Django view to add these
+    capabilities.
+
     """
 
     form_class = NewsletterSubscriptionForm
@@ -21,11 +22,11 @@ class NewsletterViewMixin(ContextMixin):
     success_url_name = None
 
     def __init__(self, *args, **kwargs):
-        """
-        Initialize the view.
+        """Initialize the view.
 
         Raises:
             ImproperlyConfigured: If success_url_name is not set in the subclass.
+
         """
         super().__init__(*args, **kwargs)
         if not self.success_url_name:
@@ -35,8 +36,7 @@ class NewsletterViewMixin(ContextMixin):
             )
 
     def get_context_data(self, **kwargs):
-        """
-        Inserts the form into the context dict for rendering.
+        """Inserts the form into the context dict for rendering.
 
         This method extends the base `get_context_data` method to add the newsletter
         subscription form to the context, making it available in the template.
@@ -46,14 +46,14 @@ class NewsletterViewMixin(ContextMixin):
 
         Returns:
             dict: The context dictionary with the form included.
+
         """
         context = super().get_context_data(**kwargs)
         context[self.form_context_object] = self.form_class()
         return context
 
     def post(self, request, *args, **kwargs):
-        """
-        Handles POST requests for newsletter subscription.
+        """Handles POST requests for newsletter subscription.
 
         This method processes the newsletter subscription form. If the form is valid,
         it either adds a new subscription or reactivates an existing one. Appropriate
@@ -67,6 +67,7 @@ class NewsletterViewMixin(ContextMixin):
         Returns:
             HttpResponseRedirect: Redirects to the specified URL on success.
             HttpResponse: Renders the template with context on failure.
+
         """
         form = self.form_class(request.POST)
         if form.is_valid():

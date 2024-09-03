@@ -5,8 +5,7 @@ from .models import NewsletterSubscriber
 
 
 class NewsletterSubscriptionForm(forms.ModelForm):
-    """
-    A Django ModelForm for handling newsletter subscriptions.
+    """A Django ModelForm for handling newsletter subscriptions.
 
     This form is associated with the NewsletterSubscriber model and is used for
     subscribing users to a newsletter service. It handles both new subscriptions
@@ -18,6 +17,7 @@ class NewsletterSubscriptionForm(forms.ModelForm):
     Attributes:
         Meta: An inner class that defines form-specific details like the associated model
               and the fields to be included in the form.
+
     """
 
     class Meta:
@@ -25,8 +25,7 @@ class NewsletterSubscriptionForm(forms.ModelForm):
         fields = ["email"]
 
     def clean_email(self):
-        """
-        Validates and processes the email field input.
+        """Validates and processes the email field input.
 
         Checks if the provided email already exists in the database. If it does, the method
         determines whether the associated subscription is active or inactive. Active
@@ -38,6 +37,7 @@ class NewsletterSubscriptionForm(forms.ModelForm):
 
         Raises:
             ValidationError: If the email address is already subscribed and active.
+
         """
         email = self.cleaned_data.get("email")
         try:

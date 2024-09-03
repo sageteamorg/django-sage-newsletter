@@ -9,9 +9,7 @@ from .helpers.text_choices import ContentPreferences, FrequencyPreferences
 
 
 class NewsletterSubscriber(models.Model):
-    """
-    Newsletter Subscriber
-    """
+    """Newsletter Subscriber."""
 
     email = models.EmailField(
         unique=True,
@@ -86,9 +84,7 @@ class NewsletterSubscriber(models.Model):
     objects = models.Manager()
 
     class Meta:
-        """
-        Meta
-        """
+        """Meta."""
 
         verbose_name = _("Newsletter Subscriber")
         verbose_name_plural = _("Newsletter Subscribers")

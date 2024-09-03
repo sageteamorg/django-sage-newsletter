@@ -7,9 +7,7 @@ from .models import NewsletterSubscriber
 
 @admin.register(NewsletterSubscriber)
 class NewsletterSubscriberAdmin(admin.ModelAdmin):
-    """
-    Newsletter Subscriber Admin
-    """
+    """Newsletter Subscriber Admin."""
 
     save_on_top = True
     list_display = (
