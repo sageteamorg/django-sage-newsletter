@@ -107,7 +107,7 @@ msgstr "ترجیح زبان"
 
 #: .\sage_newsletter\models.py:66
 msgid "GDPR Consent"
-msgstr "رضایت GDPR"
+msgstr "رضایت مقررات عمومی حفاظت از داده‌ها"
 
 #: .\sage_newsletter\models.py:73
 msgid "Last Newsletter Sent"
