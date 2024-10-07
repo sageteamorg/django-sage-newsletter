@@ -19,116 +19,116 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: .\sage_newsletter\actions\newsletter.py:9
 msgid "Confirm selected subscriptions"
-msgstr ""
+msgstr "تأیید اشتراک‌های انتخاب شده"
 
 #: .\sage_newsletter\actions\newsletter.py:15
 msgid "Deactivate selected subscriptions"
-msgstr ""
+msgstr "غیرفعال‌سازی اشتراک‌های انتخاب شده"
 
 #: .\sage_newsletter\admin.py:34
 msgid "Subscriber Information"
-msgstr ""
+msgstr "اطلاعات مشترک"
 
 #: .\sage_newsletter\admin.py:37
 msgid "Preferences"
-msgstr ""
+msgstr "ترجیحات"
 
 #: .\sage_newsletter\admin.py:39
 msgid "Subscription Status"
-msgstr ""
+msgstr "وضعیت اشتراک"
 
 #: .\sage_newsletter\apps.py:8
 msgid "Newsletter"
-msgstr ""
+msgstr "خبرنامه"
 
 #: .\sage_newsletter\helpers\text_choices.py:6
 msgid "News"
-msgstr ""
+msgstr "اخبار"
 
 #: .\sage_newsletter\helpers\text_choices.py:7
 msgid "Deals"
-msgstr ""
+msgstr "تخفیفات"
 
 #: .\sage_newsletter\helpers\text_choices.py:8
 msgid "Tips"
-msgstr ""
+msgstr "نکات"
 
 #: .\sage_newsletter\helpers\text_choices.py:12
 msgid "Daily"
-msgstr ""
+msgstr "روزانه"
 
 #: .\sage_newsletter\helpers\text_choices.py:13
 msgid "Weekly"
-msgstr ""
+msgstr "هفتگی"
 
 #: .\sage_newsletter\helpers\text_choices.py:14
 msgid "Monthly"
-msgstr ""
+msgstr "ماهانه"
 
 #: .\sage_newsletter\helpers\text_choices.py:18
 msgid "English"
-msgstr ""
+msgstr "انگلیسی"
 
 #: .\sage_newsletter\helpers\text_choices.py:19
 msgid "Spanish"
-msgstr ""
+msgstr "اسپانیایی"
 
 #: .\sage_newsletter\helpers\text_choices.py:20
 msgid "Arabic"
-msgstr ""
+msgstr "عربی"
 
 #: .\sage_newsletter\models.py:16
 msgid "Email Address"
-msgstr ""
+msgstr "آدرس ایمیل"
 
 #: .\sage_newsletter\models.py:22
 msgid "Date Subscribed"
-msgstr ""
+msgstr "تاریخ اشتراک"
 
 #: .\sage_newsletter\models.py:28
 msgid "Confirmed Subscription"
-msgstr ""
+msgstr "اشتراک تأیید شده"
 
 #: .\sage_newsletter\models.py:36
 msgid "Unsubscribe Token"
-msgstr ""
+msgstr "توکن لغو اشتراک"
 
 #: .\sage_newsletter\models.py:44
 msgid "Content Preferences"
-msgstr ""
+msgstr "ترجیحات محتوا"
 
 #: .\sage_newsletter\models.py:52
 msgid "Frequency Preferences"
-msgstr ""
+msgstr "ترجیحات فرکانس"
 
 #: .\sage_newsletter\models.py:60
 msgid "Language Preference"
-msgstr ""
+msgstr "ترجیح زبان"
 
 #: .\sage_newsletter\models.py:66
 msgid "GDPR Consent"
-msgstr ""
+msgstr "رضایت مقررات عمومی حفاظت از داده‌ها"
 
 #: .\sage_newsletter\models.py:73
 msgid "Last Newsletter Sent"
-msgstr ""
+msgstr "آخرین خبرنامه ارسال شده"
 
 #: .\sage_newsletter\models.py:79
 msgid "Is Active"
-msgstr ""
+msgstr "فعال است"
 
 #: .\sage_newsletter\models.py:89
 msgid "Newsletter Subscriber"
-msgstr ""
+msgstr "مشترک خبرنامه"
 
 #: .\sage_newsletter\models.py:90
 msgid "Newsletter Subscribers"
-msgstr ""
+msgstr "مشترکان خبرنامه"
 
 #: .\sage_newsletter\views.py:79
 msgid "We've reactivated your email address. Thanks for subscribing again!"
-msgstr ""
+msgstr "آدرس ایمیل شما را دوباره فعال کرده‌ایم. از اشتراک مجدد شما سپاسگزاریم!"
 
 #: .\sage_newsletter\views.py:84
 msgid "You have successfully subscribed to the newsletter."
-msgstr ""
+msgstr "شما با موفقیت به خبرنامه اشتراک پیدا کردید."
