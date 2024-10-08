@@ -28,13 +28,15 @@ def test_newsletter_subscription_form_existing_active_subscriber():
 
     # Validate the form to populate cleaned_data
     is_valid = form.is_valid()
-    
+
     # The form should not be valid since the email is already subscribed and active
     assert not is_valid, "The form should not be valid for an active email."
 
     # Check if the email field has the expected error
     assert "email" in form.errors, "The form should have an error for the email field."
-    assert form.errors["email"] == ["This email address is already subscribed and active."]
+    assert form.errors["email"] == [
+        "This email address is already subscribed and active."
+    ]
 
 
 @pytest.mark.django_db
