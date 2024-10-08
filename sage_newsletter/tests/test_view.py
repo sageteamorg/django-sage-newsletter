@@ -14,6 +14,7 @@ class TestNewsletterView(NewsletterViewMixin, TemplateView):
     """
     A simple test view to use the NewsletterViewMixin.
     """
+
     template_name = "test_template.html"
     success_url_name = "home"  # Assuming 'home' is a valid URL name
 
@@ -34,8 +35,10 @@ def test_newsletter_view_mixin_improperly_configured():
     Test that the mixin raises an ImproperlyConfigured exception if success_url_name is not set.
     """
     with pytest.raises(ImproperlyConfigured):
+
         class InvalidView(NewsletterViewMixin, TemplateView):
             template_name = "test_template.html"
+
         InvalidView()  # This should raise the ImproperlyConfigured exception
 
 
@@ -51,7 +54,9 @@ def test_get_context_data():
     context = view.get_context_data()
 
     assert "newsletter_form" in context, "The form should be in the context."
-    assert isinstance(context["newsletter_form"], NewsletterSubscriptionForm), "The form should be an instance of NewsletterSubscriptionForm."
+    assert isinstance(
+        context["newsletter_form"], NewsletterSubscriptionForm
+    ), "The form should be an instance of NewsletterSubscriptionForm."
 
 
 @pytest.mark.django_db
@@ -71,7 +76,10 @@ def test_post_valid_form():
 
     assert response.status_code == 302, "The response should be a redirect."
     assert len(request._messages) == 1, "There should be one success message."
-    assert list(request._messages)[0].message == "You have successfully subscribed to the newsletter."
+    assert (
+        list(request._messages)[0].message
+        == "You have successfully subscribed to the newsletter."
+    )
 
     # Verify that the subscriber was actually created
     assert NewsletterSubscriber.objects.filter(email="test@example.com").exists()
@@ -95,4 +103,3 @@ def test_post_valid_form():
 #     assert response.status_code == 200, "The response should render the template again."
 #     assert "newsletter_form" in response.context_data, "The form should be in the context."
 #     assert response.context_data["newsletter_form"].errors, "The form should contain errors."
-
