@@ -4,7 +4,7 @@ requires = [ "poetry-core>=1" ]
 
 [tool.poetry]
 name = "django-sage-newsletter"
-version = "0.1.3"
+version = "0.1.4"
 description = "Comprehensive package to handle newsletter emails."
 keywords = [ "django", "email marketing", "newsletter" ]
 authors = [ "Sepehr Akbarzadeh <sepehr@sageteam.org>" ]
