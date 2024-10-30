@@ -53,7 +53,7 @@ class NewsletterViewMixin(ContextMixin):
         else:
             self.object = None
         context = super().get_context_data(**kwargs)
-        context[self.newsletter_form_context_object] = self.form_class()
+        context[self.newsletter_form_context_object] = self.newsletter_form_class()
         return context
 
     def post(self, request, *args, **kwargs):
