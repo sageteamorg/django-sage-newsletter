@@ -17,22 +17,22 @@ class NewsletterViewMixin(ContextMixin):
 
     """
 
-    form_class = NewsletterSubscriptionForm
-    form_context_object = "newsletter_form"
-    success_url_name = None
+    newsletter_form_class = NewsletterSubscriptionForm
+    newsletter_form_context_object = "newsletter_form"
+    newsletter_success_url_name = None
 
     def __init__(self, *args, **kwargs):
         """Initialize the view.
 
         Raises:
-            ImproperlyConfigured: If success_url_name is not set in the subclass.
+            ImproperlyConfigured: If newsletter_success_url_name is not set in the subclass.
 
         """
         super().__init__(*args, **kwargs)
-        if not self.success_url_name:
+        if not self.newsletter_success_url_name:
             raise ImproperlyConfigured(
-                f"{self.__class__.__name__} is missing the 'success_url_name' attribute. "
-                "You must define 'success_url_name' in your view."
+                f"{self.__class__.__name__} is missing the 'newsletter_success_url_name' attribute. "
+                "You must define 'newsletter_success_url_name' in your view."
             )
 
     def get_context_data(self, **kwargs):
@@ -49,7 +49,7 @@ class NewsletterViewMixin(ContextMixin):
 
         """
         context = super().get_context_data(**kwargs)
-        context[self.form_context_object] = self.form_class()
+        context[self.newsletter_form_context_object] = self.form_class()
         return context
 
     def post(self, request, *args, **kwargs):
@@ -69,7 +69,7 @@ class NewsletterViewMixin(ContextMixin):
             HttpResponse: Renders the template with context on failure.
 
         """
-        form = self.form_class(request.POST)
+        form = self.newsletter_form_class(request.POST)
         if form.is_valid():
             form.save()
             if hasattr(form, "reactivated") and form.reactivated:
@@ -92,7 +92,9 @@ class NewsletterViewMixin(ContextMixin):
         # Handling for DetailView
         if isinstance(self, DetailView):
             self.object = self.get_object()
+        else:
+            self.object = None
 
         context = self.get_context_data()
-        context[self.form_context_object] = form
+        context[self.newsletter_form_context_object] = form
         return render(request, self.template_name, context)
