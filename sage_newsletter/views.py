@@ -48,6 +48,10 @@ class NewsletterViewMixin(ContextMixin):
             dict: The context dictionary with the form included.
 
         """
+        if isinstance(self, DetailView):
+            self.object = self.get_object()
+        else:
+            self.object = None
         context = super().get_context_data(**kwargs)
         context[self.newsletter_form_context_object] = self.form_class()
         return context
